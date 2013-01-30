@@ -246,7 +246,7 @@ install_target() {
     echo Decompressing target
 
     if [ -n "$local_file" ]; then
-	tar jxf "$local_file"
+	tar jxf "$local_file" -C "/srv/mer/targets/$name"
     else
 	tar jxf "/srv/mer/targets/$name.tar.bz2"
     fi
